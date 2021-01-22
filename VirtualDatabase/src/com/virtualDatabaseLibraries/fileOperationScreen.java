@@ -128,7 +128,7 @@ public class fileOperationScreen extends Lockedmedotcom {
 		      String fName = input.nextLine();
 		      for (int i = 0; i < flist.length; i++) { 
 		          String filename = flist[i]; 
-		          if (filename.equals(fName)) { 
+		          if (filename.equalsIgnoreCase(fName)) { 
 		              System.out.println(filename + " found"); 
 		              flag = 1; 
 		          } 
