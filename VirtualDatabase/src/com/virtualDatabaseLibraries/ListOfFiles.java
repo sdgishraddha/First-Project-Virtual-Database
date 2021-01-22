@@ -7,14 +7,14 @@ import java.util.Scanner;
 
 
 
-public class ListOfFiles extends MainMenu{
+public class ListOfFiles extends Lockedmedotcom{
 	Scanner input = new Scanner(System.in);
 
 	
 	
 	public void FileList() throws InputMismatchException, IOException {
-		System.out.println("Please enter the directory\n");
-		rootDir = input.nextLine();
+		
+		
 		File file = new File(rootDir);
 		if (file.exists()||file.isDirectory()) {
 		File[] files = file.listFiles();
@@ -36,7 +36,7 @@ public class ListOfFiles extends MainMenu{
 		System.out.println("\n\nPress 8 for Main Menu\nPress 9 to exit\n");
 		
 		option = input.nextInt();
-		MainMenu.optionNavigator(option);
+		Lockedmedotcom.optionNavigator(option);
 		
 	}
 }

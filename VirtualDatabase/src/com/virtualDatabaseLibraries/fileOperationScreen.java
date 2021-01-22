@@ -5,16 +5,16 @@ import java.io.IOException;
 import java.nio.file.NoSuchFileException;
 import java.util.Scanner;
 
-public class fileOperationScreen extends MainMenu {
+public class fileOperationScreen extends Lockedmedotcom {
 	boolean success = false;
 	public void fileOperation() throws IOException {
 		System.out.println("Please choose from below operations you want to perform");
-		System.out.println("Press 1 to Add new file");
-		System.out.println("Press 2 to delete existing file");
-		System.out.println("Press 3 to search a existing file");
+		System.out.println("Press 1 to Add new product.");
+		System.out.println("Press 2 to delete existing product.");
+		System.out.println("Press 3 to search a product");
 		System.out.println("\n\nPress 8 for Main Menu\nPress 9 to exit\n");
 		Scanner input = new Scanner(System.in);
-		rootDir = "/home/sdgishraddha522/eclipse-workspace/VirtualDatabase";
+		
 		
 		option = input.nextInt();
 		
@@ -22,9 +22,9 @@ public class fileOperationScreen extends MainMenu {
 			if (option == 1) {
 				addFile();
 				System.out.println("Please choose from below operations you want to perform");
-				System.out.println("Press 1 to Add new file");
-				System.out.println("Press 2 to delete existing file");
-				System.out.println("Press 3 to search a existing file");
+				System.out.println("Press 1 to Add new product");
+				System.out.println("Press 2 to delete existing product");
+				System.out.println("Press 3 to search a existing product");
 				System.out.println("\n\nPress 8 for Main Menu\nPress 9 to exit\n");
 				option = input.nextInt();
 				
@@ -32,9 +32,9 @@ public class fileOperationScreen extends MainMenu {
 			else if (option == 2) {
 				deletefile();
 				System.out.println("Please choose from below operations you want to perform");
-				System.out.println("Press 1 to Add new file");
-				System.out.println("Press 2 to delete existing file");
-				System.out.println("Press 3 to search a existing file");
+				System.out.println("Press 1 to Add new product.");
+				System.out.println("Press 2 to delete existing product.");
+				System.out.println("Press 3 to search a existing product");
 				System.out.println("\n\nPress 8 for Main Menu\nPress 9 to exit\n");
 				option = input.nextInt();
 				
@@ -43,22 +43,22 @@ public class fileOperationScreen extends MainMenu {
 			else if (option == 3) {
 				searchFile();
 				System.out.println("Please choose from below operations you want to perform");
-				System.out.println("Press 1 to Add new file");
-				System.out.println("Press 2 to delete existing file");
-				System.out.println("Press 3 to search a existing file");
+				System.out.println("Press 1 to Add new product.");
+				System.out.println("Press 2 to delete existing product.");
+				System.out.println("Press 3 to search a existing product.");
 				System.out.println("\n\nPress 8 for Main Menu\nPress 9 to exit\n");
 				option = input.nextInt();
 				
 			}
 			else if (option == 8) {
-				MainMenu.main(null);
+				Lockedmedotcom.main(null);
 			}
 			else {
 				System.out.println("Enter correct value");
 				System.out.println("Please choose from below operations you want to perform");
-				System.out.println("Press 1 to Add new file");
-				System.out.println("Press 2 to delete existing file");
-				System.out.println("Press 3 to search a existing file");
+				System.out.println("Press 1 to Add new product.");
+				System.out.println("Press 2 to delete existing product.");
+				System.out.println("Press 3 to search a existing product.");
 				System.out.println("\n\nPress 8 for Main Menu\nPress 9 to exit\n");
 				option = input.nextInt();
 			}
@@ -74,7 +74,7 @@ public class fileOperationScreen extends MainMenu {
 
 	public void deletefile() throws NoSuchFileException {
 		Scanner input = new Scanner(System.in);
-		rootDir = "/home/sdgishraddha522/eclipse-workspace/VirtualDatabase/";
+		
 		System.out.println("Enter the file name you want to delete");
 		fName = input.nextLine();
 		File path = new File(rootDir);
@@ -95,7 +95,7 @@ public class fileOperationScreen extends MainMenu {
 	}
 	
 	public void addFile() throws IOException {
-		System.out.println("Enter the file name to add to root directory");
+		System.out.println("Enter the Product name to add to root directory");
 		Scanner input = new Scanner(System.in);
 		fName = input.nextLine();
 		File path = new File(rootDir);
@@ -114,7 +114,7 @@ public class fileOperationScreen extends MainMenu {
 		
 		
 	public void searchFile() {
-		   String rootDir = "/home/sdgishraddha522/eclipse-workspace/VirtualDatabase/";
+		   
 		      File dir = new File(rootDir);
 		      String[] flist = dir.list();
 		      
