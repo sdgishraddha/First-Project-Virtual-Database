@@ -17,7 +17,7 @@ public static String fName;
 		System.out.println("Press 1 to see the list of products.\n");
 		System.out.println("Press 2 to update product list.\n");
 		System.out.println("Press 9 to close Application\n");
-		System.out.println("Please enter the valuse as per your choice\n");
+		System.out.println("Please enter the value as per your choice\n");
 		option = input.nextInt();
 		while (option != 9) {
 			if (option == 1) {
